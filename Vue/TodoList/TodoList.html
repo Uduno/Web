@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TodoList</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+
+<div id="app">
+  <h2>ToDoList</h2>
+  <div class="add_activity">
+    <input type="text" v-model="newTaskText">
+    <input type="date" v-model="selectedDate">
+    <button @click="addTask">Ajouter</button>
+  </div>
+
+  <div class="notes">
+    <div class="note" v-for="note in notes" :key="note.id">
+      <span>{{note.date}}</span>
+      <button @click="deleteNote(note)">Supprimer</button>
+      <ul>
+        <li v-for="task in note.tasks" :key="task.id">{{task.text}}
+          <button @click="deleteTask(note, task)">Supprimer</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    notes: [],
+    newTaskText: '',
+    selectedDate: ''
+  },
+  methods: {
+    addTask() {
+      const newTask = {
+        id: Date.now(),
+        text: this.newTaskText,
+        date: this.selectedDate
+      };
+
+      if (!newTask.date || !newTask.text) {
+        alert('Veuillez entrer une date et un texte');
+        return;        
+      }
+      const existingNote = this.notes.find(note => note.date === newTask.date);
+      if (existingNote) {
+        existingNote.tasks.push(newTask);
+      } else {
+        this.notes.push({
+          date: newTask.date,
+          tasks: [newTask]
+        });
+      } 
+      this.newTaskText = '';
+      this.selectedDate = '';
+    },
+    deleteTask(note, task) {
+      const index = this.notes.indexOf(note);
+      this.notes[index].tasks.splice(this.notes[index].tasks.indexOf(task), 1);
+      if (this.notes[index].tasks.length === 0) {
+        this.notes.splice(index, 1);
+      }
+    },
+    deleteNote(note) {
+      const index = this.notes.indexOf(note);
+      this.notes.splice(index, 1);
+    }
+  }
+});
+</script>
+
+<style>
+  h2{
+    text-align: center;
+  }
+
+  .add_activity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .notes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .note {
+    border: 1px solid #ff0000;
+    padding: 10px;
+    margin: 10px 0;
+  }
+</style>
+
+</body>
+</html>
