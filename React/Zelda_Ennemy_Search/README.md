@@ -45,7 +45,7 @@ npm install
 4. Lancez le serveur de développement :
 ```bash
 npm run dev
-``` 
+```
 
 ## Technologies Utilisées
 
