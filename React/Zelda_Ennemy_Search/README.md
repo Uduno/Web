@@ -23,7 +23,7 @@ Ce projet utilise **Axios** pour les requêtes HTTP. Pour installer Axios, utili
 
 ```bash
 npm install axios
-```
+``` 
 
 ## Installation 
  
