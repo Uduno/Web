@@ -1,0 +1,66 @@
+.App{
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+.title{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.searchbar_area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.searchbar_area > input{
+  width: 300px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-right: 20px;
+}
+.searchbar_area > button{
+  width: 100px;
+  height: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: rgb(116, 165, 228);
+  color: white;
+  font-size: 16px;
+}
+
+.searchbar_area > button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(116, 165, 228);
+}
+.cards{
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.fullscreen{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Assure que l'overlay apparaît au-dessus du reste du contenu */
+}
+
+
+
