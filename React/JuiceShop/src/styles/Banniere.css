@@ -1,0 +1,126 @@
+.banniere{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.background{
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.background img{
+    position: absolute;
+    width: 300px;
+    bottom: 0px
+}
+.banniere .background:nth-child(1){
+    background: linear-gradient(135deg, #ff7e30, #ffcc00);
+}
+.banniere .background:nth-child(1) img{
+    right: 0px;
+}
+.banniere .background:nth-child(2){
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    left: 100%;
+}
+
+.banniere .radiobuttons{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.banniere .radiobuttons input{
+    margin: 15px;
+    cursor: pointer;
+}
+.radiobuttons input[type="radio"] {
+    appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+.radiobuttons input[type="radio"]::before {
+    content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00095e;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.radiobuttons input[type="radio"]:checked::before {
+  background-color: #e8f854;
+}
+
+
+.canette{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+}
+
+.canette .pack{
+    background: var(--url) var(--left) 7.5px,url(../assets/canette.png);
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    aspect-ratio: 0.415;
+    height: 450px;
+    background-blend-mode: multiply;
+    mask-image: url(../assets/canette.png);
+    mask-size: auto 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%);
+    transition: all ease-in-out 0.5s;
+}
+
+.canette .pack:nth-child(1){
+    --left: 0%;
+}
+.canette .pack:nth-child(2){
+    --left: 100%;
+    opacity: 0;
+}
+
+/* Styles par défaut pour les grands écrans */
+
+@media screen and (max-width: 1024px) {
+    .banniere {
+        height: 600px;
+    }
+    .background img {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banniere {
+        height: 500px;
+    }
+    .background img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banniere {
+        height: 400px;
+    }    
+    .background img {
+        width: 150px;
+    }
+
+    .canette .pack {
+        height: 300px;
+    }
+}
