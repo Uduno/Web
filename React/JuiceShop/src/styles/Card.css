@@ -1,0 +1,49 @@
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #80808047;
+    border-radius: 5px;
+    box-shadow: inset;
+    align-items: center;
+    transition: all 0.3 ease;
+}
+
+.card:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.5);
+}
+
+.card .can{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.can .can_pack{
+    background: var(--canpack) 0% 7.5px, url("../assets/canette2.png");
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    height: 220px;
+    aspect-ratio: 0.415;
+    mask-image: url("../assets/canette.png");
+    mask-size: auto 100%;  
+    
+}
+
+.can img{
+    position: absolute;
+    height: 70px;
+    bottom: 65px;
+    right: 20px;
+}
+
+.card p{
+    font-size: large;
+
+}

@@ -1,0 +1,28 @@
+.main{
+    margin: 20px auto;
+    max-width: 1024px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1::after{
+    margin: auto;
+    content: "";
+    width: 100px;
+    height: 2px;
+    border-radius: 5px;
+    display: block;
+    background-color: black;
+}
+
+.juice_list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px auto;
+    justify-content: center;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Canette from "../assets/canette.png"
-import Lemon from "../assets/fruits/citron.png"
+import Lemon from "../assets/fruits/lemon.png"
 import Orange from "../assets/fruits/orange.png"
 import pLemon from "../assets/packs/lemon.png"
 import pOrange from "../assets/packs/orange.png"
@@ -27,8 +27,8 @@ export default function Banniere() {
             </div>
 
             <div className="canette">
-                <div className="pack" style={{'--url':`url(${pOrange})`, '--left':`${index * 100}%`, opacity: index === 0 ? 1 : 0} }></div>
-                <div className="pack" style={{'--url':`url(${pLemon})`, '--left':`${index * 200}%`, opacity: index === 1 ? 1 : 0} }></div>
+                <div className="pack" style={{'--url':`url(${pOrange})`, '--left':`${index * 100 +5}%`, opacity: index === 0 ? 1 : 0} }></div>
+                <div className="pack" style={{'--url':`url(${pLemon})`, '--left':`${index * 195}%`, opacity: index === 1 ? 1 : 0} }></div>
             </div>
         </div>
     )

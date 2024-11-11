@@ -18,13 +18,15 @@
     bottom: 0px
 }
 .banniere .background:nth-child(1){
-    background: linear-gradient(135deg, #ff7e30, #ffcc00);
+    background: rgb(242,188,114);
+background: radial-gradient(circle, rgba(242,188,114,1) 0%, rgba(238,106,0,1) 100%);
 }
 .banniere .background:nth-child(1) img{
     right: 0px;
 }
 .banniere .background:nth-child(2){
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+    background: rgb(174,255,190);
+background: radial-gradient(circle, rgba(174,255,190,1) 0%, rgba(107,149,8,1) 100%);
     left: 100%;
 }
 
@@ -50,12 +52,13 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  border: 2px solid #00095e;
+  border: 2px solid #000000;
   border-radius: 50%;
   margin-right: 5px;
 }
 .radiobuttons input[type="radio"]:checked::before {
-  background-color: #e8f854;
+  background-color: #6b6b6ba4;
+  transition: 0.3s ease-in;
 }
 
 
@@ -69,7 +72,7 @@
 }
 
 .canette .pack{
-    background: var(--url) var(--left) 7.5px,url(../assets/canette.png);
+    background: var(--url) var(--left) 7.5px,url(../assets/canette2.png);
     background-size: auto 100%;
     background-repeat: repeat-x;
     aspect-ratio: 0.415;
