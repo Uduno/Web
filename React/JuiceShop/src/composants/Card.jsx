@@ -1,4 +1,5 @@
 import '../styles/Card.css'
+import { IoAddCircleSharp } from "react-icons/io5";
 export default function Card({data, addToCart}){
     
     const handleAddToCart = () => {
@@ -13,7 +14,7 @@ export default function Card({data, addToCart}){
             </div>
             <p>{data.name}</p>
             <p>$1.50</p>
-            <div className="button" onClick={handleAddToCart}>+</div>
+            <div className="button" onClick={handleAddToCart}><IoAddCircleSharp /></div>
         </div>
     )
 }

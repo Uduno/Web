@@ -1,0 +1,144 @@
+.basket_area{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    transition: all ease-in-out 0.5s;
+}
+
+.basket{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center; 
+    margin: 5px;
+}
+
+.top_basket{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    height: 40px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+   
+}
+
+.top_basket h1{
+    font-size: 1.5rem;
+}
+
+.top_basket svg{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.list_buy{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+
+.list_buy::-webkit-scrollbar{
+    width: 0px;
+}
+
+.list_buy::-webkit-scrollbar-thumb{
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.list_buy::-webkit-scrollbar-track{
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.list_buy::-webkit-scrollbar-thumb:hover{
+    background-color: #555;
+}
+
+.item_buy{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 100px;
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.item_buy img{
+    height: 80px;
+    object-fit: contain;
+    border-right: 1px solid grey;
+    margin: 5px;
+}
+
+
+.item_buy .info{
+    width: 100%;
+    font-size: auto;
+}
+
+.item_buy .info p{
+    font-size: 1.2rem;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.buttons{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.buttons svg{
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.buttons svg:nth-child(1){
+    color: #777777;
+}
+.buttons svg:nth-child(2){
+    color: #2980b9;
+}
+
+.bottom_basket{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fff;
+}
+
