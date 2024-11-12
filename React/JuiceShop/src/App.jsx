@@ -6,12 +6,16 @@ import './App.css'
 
 function App() {
   
+  const [cart, setCart] = useState([])
 
+ 
+
+  
   return (
     <div style={{background: "#ffe3ae"}}>
-      <Navbar />
+      <Navbar cart={cart} />
       <Banniere />
-      <Product />
+      <Product  setCart={setCart}/>
     </div>
   )
 }
